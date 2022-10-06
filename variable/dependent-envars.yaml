@@ -25,4 +25,4 @@ spec:
         - name: ESCAPED_REFERENCE
           value: "$$(PROTOCOL)://$(SERVICE_IP):$(SERVICE_PORT)"
         - name: IMAGE_NAME
-          value: busybox:1.28
+          value: "busybox:1.28"
