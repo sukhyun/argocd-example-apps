@@ -10,7 +10,7 @@ spec:
       command:
         - sh
         - -c
-      image: $IMAGE_NAME
+      image: "{{ .Values.image.repository }}:{{ .Values.iamges.tag }}"
       env:
         - name: SERVICE_PORT
           value: "80"
@@ -24,5 +24,3 @@ spec:
           value: "$(PROTOCOL)://$(SERVICE_IP):$(SERVICE_PORT)"
         - name: ESCAPED_REFERENCE
           value: "$$(PROTOCOL)://$(SERVICE_IP):$(SERVICE_PORT)"
-        - name: IMAGE_NAME
-          value: busybox:1.28
