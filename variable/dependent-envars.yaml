@@ -10,7 +10,7 @@ spec:
       command:
         - sh
         - -c
-      image: "{{ .Values.image.repository }}:{{ .Values.iamges.tag }}"
+      image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
       env:
         - name: SERVICE_PORT
           value: "80"
